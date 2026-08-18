@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#17151b">
+  <title>Une petite mission pour Madame</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="noise"></div>
+<div class="progress"><span id="progressBar"></span></div>
+
+<main id="app">
+
+  <section class="screen active intro" data-screen="0">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+
+    <div class="eyebrow">UNE PETITE MISSION</div>
+
+    <h1>Pour<br><em>Madame.</em></h1>
+
+    <p class="lead">
+      J’ai quelque chose à te proposer.<br>
+      Enfin… plusieurs choses, en fait.
+    </p>
+
+    <p class="tiny">
+      Et j’ai probablement un peu trop réfléchi à la manière de te les présenter.
+    </p>
+
+    <button class="btn primary next">
+      Entrer dans l’aventure <span>→</span>
+    </button>
+  </section>
+
+
+  <section class="screen mission" data-screen="1">
+    <div class="eyebrow">DOSSIER 21.08</div>
+
+    <div class="mission-card">
+      <div class="mission-icon">☼</div>
+
+      <h2>Une petite mission pour vendredi.</h2>
+
+      <p>
+        Vendredi <strong>21 août</strong>, on se revoit.
+      </p>
+
+      <p>
+        Alors je me suis dit qu’au lieu de simplement décider quoi faire
+        comme des gens normaux, je pouvais te préparer
+        <strong>plusieurs aventures</strong>.
+      </p>
+
+      <p>
+        Tu vas les découvrir une par une. À la fin, tu choisiras celle
+        qui te fais le plus envie.
+      </p>
+
+      <div class="rule">
+        Certaines sont raisonnables.<br>
+        D’autres… un peu moins.
+      </div>
+    </div>
+
+    <button class="btn primary next">
+      Je suis prête <span>→</span>
+    </button>
+  </section>
+
+
+  <!-- PILAT -->
+  <section class="screen pilat" data-screen="2">
+    <div class="topline">
+      <span>OPTION 01</span>
+      <span>03</span>
+    </div>
+
+    <div class="hero-visual mountain">
+      <div class="sun"></div>
+      <div class="mountain-back"></div>
+      <div class="mountain-front"></div>
+      <div class="ridge"></div>
+    </div>
+
+    <div class="content">
+      <div class="eyebrow">PRENDRE DE LA HAUTEUR</div>
+
+      <h2>
+        Les crêtes<br>
+        du Pilat.
+      </h2>
+
+      <p class="subtitle">
+        Une parenthèse au grand air, à environ une heure de Lyon.
+      </p>
+
+      <div class="stats">
+        <span>🚗 ~1h</span>
+        <span>🥾 ~3h</span>
+        <span>🌄 Panorama</span>
+      </div>
+
+      <p>
+        L’idée est plutôt simple : prendre la voiture, quitter Lyon,
+        marcher un peu, profiter de la vue et passer quelques heures
+        ensemble loin de la ville.
+      </p>
+
+      <p>
+        Ça devrait être relativement tranquille.
+      </p>
+
+      <p class="italic">
+        Enfin… c’est ce que disent les gens qui proposent des randonnées
+        de 3h sur Internet.
+      </p>
+
+      <div class="ratings">
+        <div>
+          <span>Niveau aventure</span>
+          <b>★★★☆☆</b>
+        </div>
+
+        <div>
+          <span>Risque de râler dans une montée</span>
+          <b>À déterminer</b>
+        </div>
+      </div>
+
+
+      <!-- BOUTON GALERIE -->
+      <button class="btn ghost" id="showPilatPhotos">
+        Voir à quoi ça ressemble 📸
+      </button>
+
+
+      <!-- GALERIE PILAT -->
+      <div class="pilat-gallery" id="pilatGallery">
+
+        <img
+                src="images/pilat-1.jpg"
+                alt="Paysage des crêtes du Pilat"
+        >
+
+        <img
+                src="images/pilat-2.jpg"
+                alt="Vue depuis les crêtes du Pilat"
+        >
+
+        <img
+                src="images/pilat-3.jpg"
+                alt="Sentier de randonnée dans le Pilat"
+        >
+
+        <img
+                src="images/pilat-4.jpg"
+                alt="Panorama du Pilat"
+        >
+
+      </div>
+
+
+      <!-- BOUTON POUR CONTINUER -->
+      <button
+              class="btn ghost react"
+              data-reaction="Très intéressant, Madame. Je note votre intérêt. 👀"
+      >
+        Ça m’intrigue <span>→</span>
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- URBEX -->
+  <section class="screen urbex" data-screen="3">
+    <div class="classified">DOSSIER // CLASSIFIÉ</div>
+
+    <div class="topline">
+      <span>OPTION 02</span>
+      <span>03</span>
+    </div>
+
+    <div class="content">
+      <div class="file-stamp">SECRET</div>
+
+      <div class="eyebrow">MISSION D'EXPLORATION</div>
+
+      <h2>Urbex.</h2>
+
+      <p class="subtitle">
+        Un endroit abandonné. Une lampe. Et probablement quelques
+        « t’es sûr ? ».
+      </p>
+
+      <div class="case">
+        <div>
+          <span>📍</span>
+          <strong>Zone</strong>
+          <small>Lyon / alentours</small>
+        </div>
+
+        <div>
+          <span>🔦</span>
+          <strong>Activité</strong>
+          <small>Exploration</small>
+        </div>
+
+        <div>
+          <span>📸</span>
+          <strong>Bonus</strong>
+          <small>Quelques photos</small>
+        </div>
+      </div>
+
+      <p>
+        Le principe : aller découvrir un lieu où nous ne serions
+        probablement jamais allés autrement.
+      </p>
+
+      <p>
+        Le lieu exact est encore à déterminer. (j'avoue pas avoir trouvé de vrai site safe, mais si vraiment ça t'intéresse ça se trouve)
+      </p>
+
+      <p class="italic">
+        Mais rassure-toi : je suis presque certain de savoir ce que je fais.
+      </p>
+
+      <p class="tiny">
+        …<br><br>
+        Presque.
+      </p>
+
+      <div class="ratings">
+        <div>
+          <span>Niveau aventure</span>
+          <b>★★★★☆</b>
+        </div>
+
+        <div>
+          <span>Niveau « mauvaise idée ? »</span>
+          <b>★★★☆☆</b>
+        </div>
+      </div>
+
+      <button
+              class="btn classified-btn react"
+              data-reaction="Chargement de la suite ..."
+      >
+        Voyons voir la suite
+      </button>
+    </div>
+  </section>
+
+
+  <!-- OPTION 03 -->
+  <section class="screen confluence" data-screen="4">
+
+    <div class="topline">
+      <span>OPTION 03</span>
+      <span>03</span>
+    </div>
+
+    <div class="confluence-header">
+      <div class="confluence-stamp">DOSSIER // CONFLUENCE</div>
+
+      <div class="eyebrow">UNE JOURNÉE UN PEU PLUS CITADINE</div>
+
+      <h2>La tête<br>dans les nuages.</h2>
+
+      <p class="subtitle">
+        Une petite escapade à Confluence, avec quelques étapes soigneusement
+        sélectionnées par quelqu’un qui a manifestement beaucoup trop réfléchi
+        à votre vendredi.
+      </p>
+    </div>
+
+    <div class="date-route">
+
+      <!-- ÉTAPE 01 -->
+      <div class="route-item">
+        <div class="route-number">01</div>
+
+        <div class="route-content">
+          <div class="route-icon">☁️</div>
+
+          <div>
+            <div class="eyebrow">PREMIÈRE ÉTAPE</div>
+            <h3>La tête dans les nuages</h3>
+
+            <p>
+              Une activité à Confluence pour commencer la journée avec quelque
+              chose d'un peu différent.
+            </p>
+
+            <div class="route-tags">
+              <span>☁️ Activité</span>
+              <span>📍 Confluence</span>
+              <span>✨ Découverte</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ÉTAPE 02 -->
+      <div class="route-item">
+        <div class="route-number">02</div>
+
+        <div class="route-content">
+          <div class="route-icon">🍽️</div>
+
+          <div>
+            <div class="eyebrow">DEUXIÈME ÉTAPE</div>
+            <h3>Restaurant mystère</h3>
+
+            <p>
+              J'ai déjà une idée de l'endroit.
+              <br>
+              Tu n'as pas besoin de la connaître tout de suite.
+            </p>
+
+            <div class="mystery-label">
+              <span>🔒</span>
+              <strong>ADRESSE CLASSIFIÉE</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ÉTAPE 03 -->
+      <div class="route-item exhibition-route">
+        <div class="route-number">03</div>
+
+        <div class="route-content">
+
+          <div class="route-icon">🏛️</div>
+
+          <div class="exhibition-intro">
+            <div class="eyebrow">TROISIÈME ÉTAPE</div>
+
+            <h3>Et peut-être un petit détour par le musée.</h3>
+
+            <p>
+              Parce qu'une journée à Confluence sans passer par le Musée des
+              Confluences, ce serait presque dommage.
+            </p>
+
+            <p class="italic">
+              Trois expositions possibles. À toi de voir laquelle te donne le
+              plus envie.
+            </p>
+          </div>
+
+
+          <div class="exhibition-grid">
+
+            <!-- EXPO 01 -->
+            <article class="exhibition-card">
+
+              <div class="exhibition-number">01</div>
+
+              <div class="exhibition-card-icon">🇰🇵</div>
+
+              <h4>Corée du Nord</h4>
+
+              <p class="exhibition-short">
+                Regards sur l'un des pays les plus fermés au monde.
+              </p>
+
+              <button
+                      class="exhibition-toggle"
+                      type="button"
+                      aria-expanded="false"
+              >
+                En savoir plus <span>+</span>
+              </button>
+
+              <div class="exhibition-description">
+                <p>
+                  C’est un pays que l’on connaît peu… et pour cause :
+                  la Corée du Nord est une des dictatures les plus fermées
+                  au monde.
+                </p>
+
+                <p>
+                  Le photographe Stéphan Gladieu s’y est rendu cinq fois pour
+                  réaliser une série de portraits.
+                </p>
+
+                <p>
+                  Dûment autorisé à entrer dans ce pays de contrôle absolu,
+                  accompagné en permanence, il recrée avec son studio
+                  photographique mobile un cadre de liberté en jouant avec
+                  les arrière-plans et les codes de la propagande.
+                </p>
+
+                <p>
+                  Devant l’appareil photographique, les Nord-Coréens nous
+                  regardent, autant que nous les observons.
+                </p>
+
+                <p>
+                  Mais que voient-ils en nous et que percevons-nous vraiment
+                  d’eux ?
+                </p>
+              </div>
+
+            </article>
+
+
+            <!-- EXPO 02 -->
+            <article class="exhibition-card">
+
+              <div class="exhibition-number">02</div>
+
+              <div class="exhibition-card-icon">🌌</div>
+
+              <h4>Origines : les récits du monde</h4>
+
+              <p class="exhibition-short">
+                Remonter le temps pour essayer de comprendre d'où nous venons.
+              </p>
+
+              <button
+                      class="exhibition-toggle"
+                      type="button"
+                      aria-expanded="false"
+              >
+                En savoir plus <span>+</span>
+              </button>
+
+              <div class="exhibition-description">
+                <p>
+                  D’où venons-nous ?
+                </p>
+
+                <p>
+                  Toutes les sociétés ont éprouvé le besoin d’expliquer les
+                  origines de la vie, celles de l’humanité et leur évolution.
+                </p>
+
+                <p>
+                  L’exposition explore cette question dans un parcours qui
+                  invite le visiteur à remonter le temps : de l’apparition de
+                  l’humanité à celle du vivant, jusqu’à la formation de
+                  l’univers.
+                </p>
+
+                <p>
+                  Deux approches de la question des origines sont mises en
+                  regard : l’une issue des sciences naturelles et techniques,
+                  l’autre issue des sciences humaines.
+                </p>
+
+                <p>
+                  Collections paléontologiques, naturalistes, instruments
+                  d’observation du ciel, collections ethnographiques et œuvres
+                  contemporaines dialoguent tout au long du parcours.
+                </p>
+              </div>
+
+            </article>
+
+
+            <!-- EXPO 03 -->
+            <article class="exhibition-card">
+
+              <div class="exhibition-number">03</div>
+
+              <div class="exhibition-card-icon">🧬</div>
+
+              <h4>Espèces, la maille du vivant</h4>
+
+              <p class="exhibition-short">
+                Comprendre notre place au milieu de tout ce qui vit.
+              </p>
+
+              <button
+                      class="exhibition-toggle"
+                      type="button"
+                      aria-expanded="false"
+              >
+                En savoir plus <span>+</span>
+              </button>
+
+              <div class="exhibition-description">
+                <p>
+                  Qui sommes-nous ?
+                </p>
+
+                <p>
+                  La place de l’être humain et ses interactions avec l’ensemble
+                  du monde vivant forment une préoccupation universelle.
+                </p>
+
+                <p>
+                  Parce que l’Homme est à la fois animal rationnel et animal
+                  symbolique, il a besoin de deux approches complémentaires
+                  pour dénouer la complexité du monde.
+                </p>
+
+                <p>
+                  L’exposition croise ainsi les représentations symboliques,
+                  propres à toutes les cultures, et la représentation
+                  scientifique, universelle.
+                </p>
+
+                <p>
+                  Entre quête de sens et soif de connaissances.
+                </p>
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="confluence-ending">
+
+      <div class="eyebrow">BILAN DU DOSSIER</div>
+
+      <p>
+        ☁️ Une activité
+        <span>→</span>
+        🍽️ Un restaurant mystère
+        <span>→</span>
+        🏛️ Une dose de culture
+      </p>
+
+      <p class="italic">
+        Finalement, cette option est plutôt bien organisée.
+        C'en est presque suspect.
+      </p>
+
+    </div>
+
+
+    <button
+            class="btn ghost react confluence-button"
+            data-reaction="Dernière option ? ☁️"
+    >
+      Intéressant ! <span>→</span>
+    </button>
+
+  </section>
+
+
+  <!-- OPTION 04 -->
+  <section class="screen mystery" data-screen="5">
+
+    <div class="topline">
+      <span>OPTION 04</span>
+      <span>04</span>
+    </div>
+
+    <div class="free-date-header">
+
+      <div class="free-stamp">
+        DOSSIER // SANS PLAN
+      </div>
+
+      <div class="eyebrow">
+        PARFOIS, NE RIEN PRÉVOIR EST UNE BONNE IDÉE
+      </div>
+
+      <h2>
+        On verra<br>
+        bien.
+      </h2>
+
+      <p class="subtitle">
+        Une soirée volontairement peu organisée.
+        Parce que tout prévoir est parfois embêtant.
+      </p>
+
+    </div>
+
+
+    <div class="free-date-route">
+
+      <!-- ÉTAPE 01 -->
+      <div class="free-date-item">
+
+        <div class="free-date-number">
+          01
+        </div>
+
+        <div class="free-date-card">
+
+          <div class="free-date-icon">
+            🎬
+          </div>
+
+          <div class="eyebrow">
+            PREMIÈRE ÉTAPE
+          </div>
+
+          <h3>
+            Une séance de cinéma
+          </h3>
+
+          <p>
+            Direction <strong>l'Odyssée</strong> pour voir un film qui a
+            l'air vraiment bien.
+          </p>
+
+          <p class="italic">
+            Le film exact reste à déterminer, à voir ce qui nous fait le plus envie
+          </p>
+
+          <div class="free-tags">
+            <span>🎬 Cinéma</span>
+            <span>📍 Lyon</span>
+            <span>🍿 Popcorn ?</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ÉTAPE 02 -->
+      <div class="free-date-item">
+
+        <div class="free-date-number">
+          02
+        </div>
+
+        <div class="free-date-card">
+
+          <div class="free-date-icon">
+            🌃
+          </div>
+
+          <div class="eyebrow">
+            DEUXIÈME ÉTAPE
+          </div>
+
+          <h3>
+            Se laisser balader
+          </h3>
+
+          <p>
+            Et après ?
+          </p>
+
+          <p>
+            Pas vraiment de plan.
+            On marche dans Lyon, on discute, on regarde où nos pas
+            nous emmènent.
+          </p>
+
+          <p>
+            Peut-être un verre.
+            Peut-être un dessert.
+            Peut-être quelque chose qu'on n'avait absolument pas prévu.
+          </p>
+
+          <p class="italic">
+            Bref : on improvise, comme on a toujours fait.
+          </p>
+
+          <div class="free-tags">
+            <span>🚶 Balade</span>
+            <span>🌃 Lyon</span>
+            <span>🎲 Improvisation</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PHRASE FINALE -->
+    <div class="free-date-ending">
+
+      <div class="big-question">
+        ?
+      </div>
+
+      <p class="italic">
+        Parce que parfois, le meilleur plan est celui
+        qu'on n'avait pas prévu.
+      </p>
+
+      <p class="tiny">
+        Et puis, entre nous… je pense qu'on est capables
+        de trouver quelque chose à faire.
+      </p>
+
+    </div>
+
+
+    <button
+            class="btn ghost react free-date-button"
+            data-reaction="Il va falloir choisir maintenant"
+    >
+      Cette option me plaît <span>→</span>
+    </button>
+
+  </section>
+
+
+  <!-- CHOIX -->
+  <section class="screen choice" data-screen="6">
+
+    <div class="eyebrow">DERNIÈRE ÉTAPE</div>
+
+    <h2>Bon, Elinou !!!</h2>
+
+    <p class="lead">
+      Tu as maintenant découvert les quatre possibilités.
+    </p>
+
+    <p>
+      Il est temps de choisir notre aventure pour
+      <strong>vendredi 21 août.</strong>
+    </p>
+
+    <div class="choice-grid">
+
+      <!-- PILAT -->
+      <button class="choice-card" data-choice="pilat">
+        <span>🥾</span>
+        <strong>Les crêtes du Pilat</strong>
+        <small>
+          Randonnée · grand air · panorama
+        </small>
+      </button>
+
+      <!-- URBEX -->
+      <button class="choice-card" data-choice="urbex">
+        <span>🔦</span>
+        <strong>L’Urbex</strong>
+        <small>
+          Exploration · mystère · mauvaise idée ?
+        </small>
+      </button>
+
+      <!-- CONFLUENCE -->
+      <button class="choice-card" data-choice="secret">
+        <span>☁️</span>
+        <strong>La tête dans les nuages</strong>
+        <small>
+          Confluence · restaurant mystère · exposition
+        </small>
+      </button>
+
+      <!-- SANS PLAN -->
+      <button class="choice-card" data-choice="mystery">
+        <span>🎬</span>
+        <strong>Sans plan</strong>
+        <small>
+          Cinéma · balade dans Lyon · improvisation
+        </small>
+      </button>
+
+    </div>
+
+    <p class="tiny">
+      Clique sur l'aventure qui te fait le plus envie.
+    </p>
+
+  </section>
+
+
+  <!-- CONFIRMATION -->
+  <section class="screen confirm" data-screen="7">
+
+    <div class="eyebrow">
+      DERNIÈRE VÉRIFICATION
+    </div>
+
+    <div class="confirm-card">
+
+      <div id="confirmIcon" class="confirm-icon">
+        🌄
+      </div>
+
+      <div class="confirm-label">
+        VOTRE CHOIX
+      </div>
+
+      <h2 id="confirmTitle">
+        Le Pilat
+      </h2>
+
+      <p id="confirmText">
+        Vous avez choisi de prendre de la hauteur.
+      </p>
+
+      <div id="confirmDetails" class="confirm-details">
+        <span>🥾 Randonnée</span>
+        <span>🌄 Panorama</span>
+        <span>❤️ Moment à deux</span>
+      </div>
+
+      <p class="italic confirm-question">
+        Êtes-vous vraiment certaine de vouloir
+        passer votre vendredi à faire ça avec moi ?
+      </p>
+
+      <div class="confirm-actions">
+
+        <button class="btn primary" id="validate">
+          Oui, évidemment ❤️
+        </button>
+
+        <button class="btn text" id="backChoice">
+          Attendez… j'ai changé d'avis
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESULTAT -->
+  <section class="screen result" data-screen="8">
+
+    <div class="confetti" id="confetti"></div>
+
+    <div class="eyebrow">
+      MISSION VALIDÉE
+    </div>
+
+    <div class="result-card">
+
+      <div id="resultIcon" class="result-icon">
+        🌄
+      </div>
+
+      <div class="result-label">
+        VENDREDI 21 AOÛT
+      </div>
+
+      <h2 id="resultTitle">
+        C’est décidé.
+      </h2>
+
+      <div id="resultBody"></div>
+
+      <div class="heart">
+        ☆
+      </div>
+
+      <p class="signature">
+        Rendez-vous vendredi, Madame.
+      </p>
+
+      <p class="result-footer">
+        Et cette fois, pas de bouton « revenir en arrière ». 😌
+      </p>
+
+    </div>
+
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
